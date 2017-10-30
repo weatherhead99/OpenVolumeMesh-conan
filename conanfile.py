@@ -28,8 +28,7 @@ class OpenvolumemeshConan(ConanFile):
         inc_srcdir = "OpenVolumeMesh/src/OpenVolumeMesh/"
         self.copy("*.hh",dst="include/OpenVolumeMesh",src=inc_srcdir)
         self.copy("*T.cc",dst="include/OpenVolumeMesh",src=inc_srcdir)
-                
-        self.copy("*.so", dst="lib", keep_path=False)
+        self.copy("*.so*", dst="lib", keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
 
     def package_info(self):
@@ -38,4 +37,4 @@ class OpenvolumemeshConan(ConanFile):
         if not self.options.shared:
             self.cpp_info.libs=["libOpenVolumeMeshStatic.a"]
         else:
-            self.cpp_info.libs=["libOpenVolumeMesh.so"]
+            self.cpp_info.libs=["libOpenVolumeMesh.so.2.0"]

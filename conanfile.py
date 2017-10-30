@@ -6,7 +6,7 @@ class OpenvolumemeshConan(ConanFile):
     name = "OpenVolumeMesh"
     version = "2.0.0"
     license = "LGPL-3.0"
-    url = "<Package recipe repository url here, for issues about the package>"
+    url = "https://github.com/weatherhead99/OpenVolumeMesh-conan"
     description = "A Generic and Versatile Index-Based Data Structure for Polytopal Meshes"
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False]}
